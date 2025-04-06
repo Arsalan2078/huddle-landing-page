@@ -1,13 +1,12 @@
 @use "reset";
+@use "root";
+@use "typography";
+@use "container";
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
 
-:root {
-  --color-violet: hsl(257, 40%, 49%);
-  --color-soft-magenta: hsl(300, 69%, 71%);
-
-  --font-family-poppins: "Poppins", sans-serif;
-  --font-family-open-sans: "Open Sans", sans-serif;
-  --font-weight-400: 400;
-  --font-weight-600: 600;
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
 }

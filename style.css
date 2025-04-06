@@ -121,10 +121,51 @@ meter {
 :root {
   --color-violet: hsl(257, 40%, 49%);
   --color-soft-magenta: hsl(300, 69%, 71%);
+  --color-white: hsl(0, 0%, 100%);
   --font-family-poppins: "Poppins", sans-serif;
   --font-family-open-sans: "Open Sans", sans-serif;
   --font-weight-400: 400;
   --font-weight-600: 600;
+  --font-size-lg: clamp(1.5rem, 0.5rem + 4.1667vw, 2.5rem);
+  --font-size-rg: clamp(1rem, 0.875rem + 0.5208vw, 1.125rem);
+  --font-size-sm: clamp(0.75rem, 0.375rem + 1.5625vw, 1.125rem);
+  --leading-150: 150%;
+  background-color: var(--color-violet);
+  color: var(--color-white);
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-family-open-sans);
+  font-weight: var(--font-weight-400);
+  font-size: var(--font-size-rg);
+  line-height: var(--leading-150);
+}
+
+h1 {
+  font-family: var(--font-family-poppins);
+  font-weight: var(--font-weight-600);
+  font-size: var(--font-size-lg);
+  line-height: var(--leading-150);
+}
+
+button {
+  font-family: var(--font-family-poppins);
+  font-weight: var(--font-weight-400);
+  font-size: var(--font-size-sm);
+  line-height: var(--leading-150);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 2.5rem;
+  width: min(100%, 80rem);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
 }
 
 /*# sourceMappingURL=style.css.map */

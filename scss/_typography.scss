@@ -1,0 +1,20 @@
+body {
+  font-family: var(--font-family-open-sans);
+  font-weight: var(--font-weight-400);
+  font-size: var(--font-size-rg);
+  line-height: var(--leading-150);
+}
+
+h1 {
+  font-family: var(--font-family-poppins);
+  font-weight: var(--font-weight-600);
+  font-size: var(--font-size-lg);
+  line-height: var(--leading-150);
+}
+
+button {
+  font-family: var(--font-family-poppins);
+  font-weight: var(--font-weight-400);
+  font-size: var(--font-size-sm);
+  line-height: var(--leading-150);
+}
