@@ -158,14 +158,125 @@ button {
 
 .container {
   margin: 0 auto;
-  padding: 2.5rem;
-  width: min(100%, 80rem);
+  padding: 2.5rem clamp(2.5rem, 0rem + 10.4167vw, 5rem);
+  width: min(100%, 90rem);
+}
+
+.hero-image {
+  width: min(100%, 24rem);
+}
+
+.button {
+  --bg-color: var(--_bg-color, var(--color-white));
+  --color: var(--_color, var(--color-violet));
+  cursor: pointer;
+  border-radius: 999px;
+  padding: 0.75rem;
+  background-color: var(--bg-color);
+  color: var(--color);
+  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  transition: background-color 0.15s, color 0.15s;
+}
+.button:hover, .button:focus {
+  --_bg-color: var(--color-soft-magenta);
+  --_color: var(--color-white);
+}
+
+@media screen and (min-width: 768px) {
+  .button {
+    width: 15rem;
+  }
+}
+.brand-link {
+  --brand-link-color: var(--_brand-link-color, var(--color-white));
+  border: 1px solid var(--brand-link-color);
+  border-radius: 999px;
+  color: var(--brand-link-color);
+  width: clamp(1.75rem, 1rem + 3.125vw, 2.5rem);
+  aspect-ratio: 1/1;
+  transition: color 0.15s, border-color 0.15s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.brand-link:hover, .brand-link:focus {
+  --_brand-link-color: var(--color-soft-magenta);
 }
 
 body {
   display: flex;
   flex-direction: column;
   min-height: 100svh;
+  background-image: url("./images/bg-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.header .container {
+  padding-top: clamp(2.5rem, 1rem + 6.25vw, 4rem);
+  display: flex;
+  justify-content: start;
+}
+.header .logo {
+  width: clamp(7.5rem, 2.5rem + 20.8333vw, 12.5rem);
+}
+
+.main {
+  flex-grow: 1;
+}
+.main .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(3.75rem, 3.375rem + 1.5625vw, 4.125rem);
+}
+.main .content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.main .content__text {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 0.5rem + 2.0833vw, 1.5rem);
+  text-align: center;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: center;
+}
+.footer .brands {
+  display: flex;
+  gap: clamp(0.625rem, 0.25rem + 1.5625vw, 1rem);
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background-image: url("../images/bg-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .main .container {
+    flex-direction: row;
+    align-items: start;
+  }
+  .main .hero-image {
+    flex: 13;
+  }
+  .main .content {
+    flex: 10;
+    margin-top: 2rem;
+  }
+  .main .content__text {
+    text-align: start;
+  }
+  .footer .container {
+    justify-content: end;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,5 @@
+.container {
+  margin: 0 auto;
+  padding: 2.5rem clamp(2.5rem, 0rem + 10.4167vw, 5rem);
+  width: min(100%, 90rem);
+}

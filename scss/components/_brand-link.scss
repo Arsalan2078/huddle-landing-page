@@ -1,0 +1,21 @@
+.brand-link {
+  --brand-link-color: var(--_brand-link-color, var(--color-white));
+
+  border: 1px solid var(--brand-link-color);
+  border-radius: 999px;
+  color: var(--brand-link-color);
+
+  width: clamp(1.75rem, 1rem + 3.125vw, 2.5rem);
+  aspect-ratio: 1/1;
+
+  transition: color 0.15s, border-color 0.15s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover,
+  &:focus {
+    --_brand-link-color: var(--color-soft-magenta);
+  }
+}
