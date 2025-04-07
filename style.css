@@ -280,7 +280,7 @@ body {
 
 @media screen and (min-width: 768px) {
   body {
-    background-image: url("../images/bg-desktop.svg");
+    background-image: url("./images/bg-desktop.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
