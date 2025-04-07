@@ -1,0 +1,19 @@
+.footer {
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .brands {
+    display: flex;
+    gap: clamp(0.625rem, 0.25rem + 1.5625vw, 1rem);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    .container {
+      justify-content: end;
+    }
+  }
+}

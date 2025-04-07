@@ -1,0 +1,11 @@
+.header {
+  .container {
+    padding-top: clamp(2.5rem, 1rem + 6.25vw, 4rem);
+    display: flex;
+    justify-content: start;
+  }
+
+  .logo {
+    width: clamp(7.5rem, 2.5rem + 20.8333vw, 12.5rem);
+  }
+}

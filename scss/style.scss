@@ -1,64 +1,11 @@
-@use "./reset";
-@use "./root";
-@use "./typography";
-@use "./components/index";
+@use "./base/z-index" as base;
+@use "./layout/z-index" as layout;
+@use "./components/z-index" as components;
 
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100svh;
-
   background-image: url("./images/bg-mobile.svg");
   background-repeat: no-repeat;
   background-size: contain;
-}
-
-.header {
-  .container {
-    padding-top: clamp(2.5rem, 1rem + 6.25vw, 4rem);
-    display: flex;
-    justify-content: start;
-  }
-
-  .logo {
-    width: clamp(7.5rem, 2.5rem + 20.8333vw, 12.5rem);
-  }
-}
-
-.main {
-  flex-grow: 1;
-
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: clamp(3.75rem, 3.375rem + 1.5625vw, 4.125rem);
-  }
-
-  .content {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-
-    &__text {
-      display: flex;
-      flex-direction: column;
-      gap: clamp(1rem, 0.5rem + 2.0833vw, 1.5rem);
-      text-align: center;
-    }
-  }
-}
-
-.footer {
-  .container {
-    display: flex;
-    justify-content: center;
-  }
-
-  .brands {
-    display: flex;
-    gap: clamp(0.625rem, 0.25rem + 1.5625vw, 1rem);
-  }
 }
 
 @media screen and (min-width: 768px) {
@@ -67,31 +14,5 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-  }
-
-  .main {
-    .container {
-      flex-direction: row;
-      align-items: start;
-    }
-
-    .hero-image {
-      flex: 13;
-    }
-
-    .content {
-      flex: 10;
-      margin-top: 2rem;
-
-      &__text {
-        text-align: start;
-      }
-    }
-  }
-
-  .footer {
-    .container {
-      justify-content: end;
-    }
   }
 }
