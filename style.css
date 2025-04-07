@@ -167,9 +167,6 @@ body {
   display: flex;
   justify-content: start;
 }
-.header .logo {
-  width: clamp(7.5rem, 2.5rem + 20.8333vw, 12.5rem);
-}
 
 .main {
   flex-grow: 1;
@@ -226,6 +223,10 @@ body {
   margin: 0 auto;
   padding: 2.5rem clamp(2.5rem, 0rem + 10.4167vw, 5rem);
   width: min(100%, 90rem);
+}
+
+.logo {
+  width: clamp(7.5rem, 2.5rem + 20.8333vw, 12.5rem);
 }
 
 .hero-image {
